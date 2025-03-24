@@ -1,0 +1,7 @@
+1. MongoDB 정리
+=> MongoDB는 DBMS이고 실행되는 위치에 따라 로컬 또는 서버에 위치할 수 있습니다.
+=> Altas가 아니기 떄문에 db.hello() isWritablePrimary: true 이며 이를 통해 로컬인 것을 확인할 수 있습니다.
+
+
+2. MongoDB는 drivers를 통해 여러 언어와 통합될 수 있습니다.
+=> node에서 mysqld와 비슷합니다.
