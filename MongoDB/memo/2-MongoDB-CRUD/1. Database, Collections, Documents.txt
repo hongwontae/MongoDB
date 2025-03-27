@@ -1,0 +1,34 @@
+1. Database
+=> 하나의 MongoDB 서버에 여러 Database가 존재할 수 있습니다.
+
+2. Collections
+=> 하나의 DB에 여러 Collection이 존재할 수 있습니다.
+=> 컬렉션은 SQL의 테이블과 유사합니다.
+
+3. Documents
+=> 하나의 Collection에 여러 Document가 존재합니다.
+=> 문서는 SQL의 행과 비슷합니다.
+
+
+4. cls => CLI Clear Command
+
+
+5. show dbs 
+=> 서버에 어떤 DB가 존재하는지 알 수 있습니다.
+=> 기본 데이터 베이스가 존재합니다. admin, config, local입니다.
+=> 해당 DB 들은 서버의 설정을 위해 존재합니다.
+
+
+6. use dbname 
+=> 이를 통해 db를 생성하고 접속할 수 있습니다.
+=> 그러나 data를 insert 하지 않으면 아직 생성되지 않습니다.
+
+
+6. db.collectionName
+=> 접속한 db에서 collection을 생성합니다.
+=> 그러나 insert 전까지 생성되지 않습니다.
+
+
+7. db.collectionName.insertOne({})
+=> 데이터를 추가하는 명령어입니다.
+=> JSON 구조를 따르고 있습니다.

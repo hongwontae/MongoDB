@@ -1,0 +1,54 @@
+1. CRUD
+=> Create, Read, Update, Delete
+
+2. Create
+2-1. insertOne(data, options)
+2-2. insertMany(data, options)
+=> insertMany([{}, {}, {}]) 배열 안에 BSON를 넣어서 처리합니다.
+
+
+3. Read
+3-1. find(filter, options)
+=> find({key: vlaue})/ key-value에 일치하는 모든 커서를 반환합니다.
+=> 키워드를 통해 특정 조건을 걸 수 있습니다.
+=> find({key : {$gt : 12000} })/ key에 해당하는 value가 12000이 넘는 커서를 반환합니다.
+
+=> find는 배열 객체를 전달해주는 것이 아니라 커서 객체를 반환합니다.
+=> MongoDB 설정은 find을 통해 데이터를 전달할 떄 순차적으로 20개만 반환합니다.
+
+** Cursor Object
+=> DB에서 쿼리 결과를 효율적으로 탐색하고 처리할 수 있는 객체입니다.
+=> toArray()를 통해 전체 문서를 가져옵니다.
+=> forEach()를 사용해서 문서를 하나씩 처리할 수 있습니다.
+=> next()를 사용해서 하나씩 가져올 수 있습니다. (반복x)
+
+** Cursor는 지연로딩으로 데이터를 가져옵니다. **
+=> batch size라는 개념을 사용하여 find()로 쿼리한 결과를 한 번에 가져올 문서의 개수를 정합니다.
+=> 이 후 추가로 요청할 떄 batch size 이후의 문서를 가져옵니다.
+
+3-2. findOne(filter, options)
+=> 3-1과 유사하지만 일치하는 첫 번쨰 문서를 반환합니다.
+
+
+4. Update
+4-1. updateOne(filter, data, options)
+=> updateMany({key : value}, {$set : {marker : "toDelete"} })
+(첫 번쨰 인자로 업데이트를 원하는 행을 찾고 두 번쨰 인자로 해당 속성을 업데이트 합니다.)
+($set은 update할 떄 변경되길 원하는 BSON을 지정하는 키워드입니다. 또한 *필드가 없다면 추가합니다.*)
+
+4-2. updateMany(filter, data, options)
+=> filter에 일치하는 모든 문서를 업데이트합니다.
+
+
+5. Delete
+5-1. deleteOne(filter, options)
+=> deleteOne({key : value}) key,value가 일치하는 문서를 찾아서 삭제합니다.
+
+5-2. deleteMany(filter, options)
+=> deleteMany({key : value})
+(key-value에 일치하는 모든 데이터를 삭제합니다.)
+
+=> deleteMany({})
+(모든 데이터를 삭제합니다.)
+=> deleteMany({key : value})
+(해당되는 모든 데이터를 삭제합니다.)

@@ -5,3 +5,28 @@
 
 2. MongoDB는 drivers를 통해 여러 언어와 통합될 수 있습니다.
 => node에서 mysqld와 비슷합니다.
+
+
+3. cmd에서 mongosh 명령을 입력하면 서버가 활성화되고 MongoDB에 접근하여 데이터를 조작할 수 있습니다.
+=> 초기 상태는 인증이 필요없습니다.
+
+
+4. mogod
+=> MongoDB 서버를 실행하는 명령어입니다.
+=> 이걸 실행해야 mongosh로 접속이 가능합니다.
+=> 이 떄 명령 프롬프트는 관리자 권한으로 실행해야 합니다.
+=> net start MongoDB를 통해 백그라운드에서 항상 MongoDB가 실행중이기에 mongod를 수동으로 실행할 필요가 없습니다.
+
+5. mongosh
+=> MongoDB 서버에 접속하는 CLI입니다.
+=> mongod가 실행된 상태에서만 사용이 가능합니다.
+
+
+6. mongoDB bin에서 mongod Configuration 원본에서 여러 설정을 할 수 있습니다.
+=> net :
+    port : 28019 // 이렇게 port를 바꿀 수 있습니다.
+
+
+7. Mongo Drivers
+=> Drivers를 통해 많은 서버 언어와 연동을 할 수 있고 연동된 환경에 맞춰 코드를 작성합니다.
+=> Shell은 Drivers를 이용하지 않는 순수 MongoDB 명령어로 동작합니다.
