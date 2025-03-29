@@ -17,3 +17,10 @@
 3-1. 클라이언트에서 json으로 데이터를 보냅니다.
 3-2. MongoDB 서버가 json을 bson으로 변환하여 저장합니다.
 3-3. Mongo Server가 데이터를 내보낼 떄 json으로 변환하여 내보냅니다.
+
+
+4. MongoDB Shell
+=> 일반적인 Mongo Sehll은 Node.js 기반으로 동작합니다.
+=> BSON 형식을 사용하기에 JS 기반의 shell을 기본값으로 사용합니다.
+=> 변수 사용, new Date(), new TimeStampe(), 조건문, 루트, 함수 정의, JS 내장 함수 호출 등등...
+

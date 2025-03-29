@@ -1,0 +1,12 @@
+1. db.dropDatabase();
+=> 현재 접속하고 있는 DB를 삭제합니다.
+
+2. db.myCollection.drop()
+=> 현재 접속하고 있는 collection을 삭제합니다.
+
+3. db.stats()
+=> 해당 DB의 정보를 볼 수 있습니다.
+=> DBName, CollectionName, Size...
+
+4. typeof db.collection.findOne().key
+=> key에 대한 type을 알 수 있습니다.
