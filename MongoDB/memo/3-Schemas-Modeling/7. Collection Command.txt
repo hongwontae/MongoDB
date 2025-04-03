@@ -1,0 +1,8 @@
+1. show collections	
+=> 현재 DB의 컬렉션 목록을 출력합니다.
+
+2. db.getCollectionNames()	
+=> 컬렉션 목록을 배열 형태로 반환합니다.
+
+3. db.getCollectionInfos()	
+=> 컬렉션의 세부 정보까지 출력합니다.
