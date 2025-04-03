@@ -32,6 +32,8 @@
                     description: "사용자의 나이 (18~99 사이의 정수)"
                 },
                 // 임베딩한 객체 스키마를 정의하는 방법입니다.
+                // 만약 배열 안에 객체를 표현할 때는 profile의 키로 items를 정의하고 똑같이 bsonType : object..
+                // 이렇게 다 설정하면 됩니다.
                 profile : {
                     bsonType : "object",
                     requried : ["",""],
