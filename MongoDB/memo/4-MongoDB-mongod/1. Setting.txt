@@ -1,0 +1,11 @@
+1. dbpath, logpath
+=> mongod --dppath <데이터 저장 경로> --logpath <로그 저장 경로> --fork
+=> 데이터 저장 경로와 로그 저장 경로를 지정하여 데이터 저장소, 로그 저장소를 결정합니다.
+
+1-1. 기본 dbpath, logpath
+=> C:\Program Files\MongoDB\Server\8.0\data (데이터 저장소)
+=> C:\Program Files\MongoDB\Server\8.0\log (로그 저장소)
+=> default 저장소입니다.
+
+1-2. bin 폴더의 mongod.cfg에서 MongoDB에 대한 설정 파일이 존재합니다.
+=> dbpath, logpath, net port 등 다양한 설정이 존재하고 변경할 수 있습니다.
